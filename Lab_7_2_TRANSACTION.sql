@@ -1,24 +1,23 @@
 --- 2
-BEGIN TRAN  -- открываем параллельную транзакцию
-DELETE FROM TEST_ISOLATION_LEVEL WHERE AGE=35 -- удаляем строку из таблицы
+BEGIN TRAN  -- РѕС‚РєСЂС‹РІР°РµРј РїР°СЂР°Р»Р»РµР»СЊРЅСѓСЋ С‚СЂР°РЅР·Р°РєС†РёСЋ
+DELETE FROM TEST_ISOLATION_LEVEL WHERE AGE=35 -- СѓРґР°Р»СЏРµРј СЃС‚СЂРѕРєСѓ РёР· С‚Р°Р±Р»РёС†С‹
 
 --- 4
-ROLLBACK TRAN -- откатываем транзакцию
+ROLLBACK TRAN -- РѕС‚РєР°С‚С‹РІР°РµРј С‚СЂР°РЅР·Р°РєС†РёСЋ
 
 --- 7
-BEGIN TRAN  -- открываем параллельную транзакцию
-DELETE FROM TEST_ISOLATION_LEVEL WHERE AGE=35 -- удаляем строку из таблицы
+BEGIN TRAN  -- РѕС‚РєСЂС‹РІР°РµРј РїР°СЂР°Р»Р»РµР»СЊРЅСѓСЋ С‚СЂР°РЅР·Р°РєС†РёСЋ
+DELETE FROM TEST_ISOLATION_LEVEL WHERE AGE=35 -- СѓРґР°Р»СЏРµРј СЃС‚СЂРѕРєСѓ РёР· С‚Р°Р±Р»РёС†С‹
 
 --- 9
-ROLLBACK TRAN -- откатываем транзакцию 
+ROLLBACK TRAN -- РѕС‚РєР°С‚С‹РІР°РµРј С‚СЂР°РЅР·Р°РєС†РёСЋ 
 
 --- 12
-BEGIN TRAN  -- открываем параллельную транзакцию
-DELETE FROM TEST_ISOLATION_LEVEL WHERE AGE=35 -- удаляем строку из таблицы
+BEGIN TRAN  -- РѕС‚РєСЂС‹РІР°РµРј РїР°СЂР°Р»Р»РµР»СЊРЅСѓСЋ С‚СЂР°РЅР·Р°РєС†РёСЋ
+DELETE FROM TEST_ISOLATION_LEVEL WHERE AGE=35 -- СѓРґР°Р»СЏРµРј СЃС‚СЂРѕРєСѓ РёР· С‚Р°Р±Р»РёС†С‹
 COMMIT TRAN
 
 --- 19
 BEGIN TRAN
-INSERT INTO TEST_ISOLATION_LEVEL VALUES ('EVGENIY',37,'BREST');-- Строк обработано:1
-COMMIT TRAN -- завершаем транзакцию
-
+INSERT INTO TEST_ISOLATION_LEVEL VALUES ('EVGENIY',37,'BREST');-- РЎС‚СЂРѕРє РѕР±СЂР°Р±РѕС‚Р°РЅРѕ:1
+COMMIT TRAN -- Р·Р°РІРµСЂС€Р°РµРј С‚СЂР°РЅР·Р°РєС†РёСЋ
