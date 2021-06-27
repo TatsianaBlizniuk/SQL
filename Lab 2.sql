@@ -1,4 +1,4 @@
-/* Таблица поставщиков */
+/* РўР°Р±Р»РёС†Р° РїРѕСЃС‚Р°РІС‰РёРєРѕРІ */
 CREATE TABLE PROVIDERS
 (
 PROVIDER VARCHAR(20) NOT NULL,
@@ -11,7 +11,7 @@ ADD CONSTRAINT PROVIDERS_PK PRIMARY KEY (PROVIDER);
 
 
 
-/* Таблица продукции */
+/* РўР°Р±Р»РёС†Р° РїСЂРѕРґСѓРєС†РёРё */
 CREATE TABLE PRODUCTS
 (
 NUMBER INT NOT NULL,
@@ -24,7 +24,7 @@ ADD CONSTRAINT PRODUCTS_PK PRIMARY KEY (NUMBER);
 
 
 
-/* Таблица заказов */
+/* РўР°Р±Р»РёС†Р° Р·Р°РєР°Р·РѕРІ */
 CREATE TABLE ORDERSS
 (
 NUMBER INT NOT NULL,
@@ -44,7 +44,7 @@ ALTER TABLE ORDERSS
   REFERENCES PRODUCTS (NUMBER);
 
 
-/* Таблица цен*/
+/* РўР°Р±Р»РёС†Р° С†РµРЅ*/
 CREATE TABLE PRICE
 (
 PROVIDER VARCHAR(20) NOT NULL,
@@ -62,18 +62,18 @@ ALTER TABLE PRICE
 
 
 
-INSERT INTO PROVIDERS VALUES ('ООО Колесо','ул. Калинина, 5','+375295685667');
-INSERT INTO PROVIDERS VALUES ('ООО Руль','ул. Минина, 3','+375299687453');
-INSERT INTO PROVIDERS VALUES ('ООО Коленвал','ул. Сурганова, 67','+375295644447');
+INSERT INTO PROVIDERS VALUES ('ГЋГЋГЋ ГЉГ®Г«ГҐГ±Г®','ГіГ«. ГЉГ Г«ГЁГ­ГЁГ­Г , 5','+375295685667');
+INSERT INTO PROVIDERS VALUES ('ГЋГЋГЋ ГђГіГ«Гј','ГіГ«. ГЊГЁГ­ГЁГ­Г , 3','+375299687453');
+INSERT INTO PROVIDERS VALUES ('ГЋГЋГЋ ГЉГ®Г«ГҐГ­ГўГ Г«','ГіГ«. Г‘ГіГ°ГЈГ Г­Г®ГўГ , 67','+375295644447');
 
-INSERT INTO PRODUCTS VALUES (1434,'Колесо',5);
-INSERT INTO PRODUCTS VALUES (1614,'Руль',8);
-INSERT INTO PRODUCTS VALUES (1734,'Дверь',3);
+INSERT INTO PRODUCTS VALUES (1434,'ГЉГ®Г«ГҐГ±Г®',5);
+INSERT INTO PRODUCTS VALUES (1614,'ГђГіГ«Гј',8);
+INSERT INTO PRODUCTS VALUES (1734,'Г„ГўГҐГ°Гј',3);
 
-INSERT INTO PRICE VALUES ('ООО Колесо','Колесо',1434,200);
-INSERT INTO PRICE VALUES ('ООО Руль','Руль',1614,500);
-INSERT INTO PRICE VALUES ('ООО Коленвал','Дверь',1734,400);
+INSERT INTO PRICE VALUES ('ГЋГЋГЋ ГЉГ®Г«ГҐГ±Г®','ГЉГ®Г«ГҐГ±Г®',1434,200);
+INSERT INTO PRICE VALUES ('ГЋГЋГЋ ГђГіГ«Гј','ГђГіГ«Гј',1614,500);
+INSERT INTO PRICE VALUES ('ГЋГЋГЋ ГЉГ®Г«ГҐГ­ГўГ Г«','Г„ГўГҐГ°Гј',1734,400);
 
-INSERT INTO ORDERSS VALUES (1434,'ООО Колесо','Колесо','2020-12-01',200,3,'Дед Мороз');
-INSERT INTO ORDERSS VALUES (1614,'ООО Руль','Руль','2020-09-24',400,5,'Иванов');
-INSERT INTO ORDERSS VALUES (1734,'ООО Коленвал','Дверь','2020-03-071',800,7,'Яша');
+INSERT INTO ORDERSS VALUES (1434,'ГЋГЋГЋ ГЉГ®Г«ГҐГ±Г®','ГЉГ®Г«ГҐГ±Г®','2020-12-01',200,3,'Г„ГҐГ¤ ГЊГ®Г°Г®Г§');
+INSERT INTO ORDERSS VALUES (1614,'ГЋГЋГЋ ГђГіГ«Гј','ГђГіГ«Гј','2020-09-24',400,5,'Г€ГўГ Г­Г®Гў');
+INSERT INTO ORDERSS VALUES (1734,'ГЋГЋГЋ ГЉГ®Г«ГҐГ­ГўГ Г«','Г„ГўГҐГ°Гј','2020-03-071',800,7,'ГџГёГ ');
