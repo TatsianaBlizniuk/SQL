@@ -1,4 +1,4 @@
-/* Таблица подразделений */
+/* РўР°Р±Р»РёС†Р° РїРѕРґСЂР°Р·РґРµР»РµРЅРёР№ */
 CREATE TABLE user03_DEPT
 (
   DEPTNO INT NOT NULL,
@@ -12,7 +12,7 @@ ALTER TABLE user03_DEPT
 ALTER TABLE user03_DEPT
   ADD CONSTRAINT DEPT_UK UNIQUE (DNAME);
 
-/* Таблица сотрудников */
+/* РўР°Р±Р»РёС†Р° СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ */
 CREATE TABLE EMP
 (
   EMPNO    INT NOT NULL,
@@ -37,7 +37,7 @@ ALTER TABLE EMP
   REFERENCES EMP (EMPNO);
 
   
-/* Таблица вилок зарплат */
+/* РўР°Р±Р»РёС†Р° РІРёР»РѕРє Р·Р°СЂРїР»Р°С‚ */
 CREATE TABLE SALGRADE (
  GRADE               INT NOT NULL,
  LOSAL               INT,
@@ -46,13 +46,13 @@ CREATE TABLE SALGRADE (
 ALTER TABLE SALGRADE
   ADD CONSTRAINT SALGRADE_PK PRIMARY KEY (GRADE);
 
-/* Данные по подразделениям */
+/* Р”Р°РЅРЅС‹Рµ РїРѕ РїРѕРґСЂР°Р·РґРµР»РµРЅРёСЏРј */
 INSERT INTO user03_DEPT VALUES (10,'ACCOUNTING','NEW YORK');
 INSERT INTO user03_DEPT VALUES (20,'RESEARCH','DALLAS');
 INSERT INTO user03_DEPT VALUES (30,'SALES','CHICAGO');
 INSERT INTO user03_DEPT VALUES (40,'OPERATIONS','BOSTON');
 
-/* Данные по сотрудникам */
+/* Р”Р°РЅРЅС‹Рµ РїРѕ СЃРѕС‚СЂСѓРґРЅРёРєР°Рј */
 INSERT INTO EMP VALUES (7839,'KING','PRESIDENT',NULL,'2011-09-11',5000,NULL,10);
 INSERT INTO EMP VALUES (7698,'BLAKE','MANAGER',7839,'2014-01-31',2850,NULL,30);
 INSERT INTO EMP VALUES (7782,'CLARK','MANAGER',7839,'2013-02-21',2450,NULL,10);
@@ -68,7 +68,7 @@ INSERT INTO EMP VALUES (7788,'SCOTT','ANALYST',7566,'2017-01-11',3000,NULL,20);
 INSERT INTO EMP VALUES (7876,'ADAMS','CLERK',7788,'2018-07-13',1100,NULL,20);
 INSERT INTO EMP VALUES (7934,'MILLER','CLERK',7782,'2018-03-12',1300,NULL,10);
 
-/* Данные по уровням зарплат */
+/* Р”Р°РЅРЅС‹Рµ РїРѕ СѓСЂРѕРІРЅСЏРј Р·Р°СЂРїР»Р°С‚ */
 INSERT INTO SALGRADE VALUES (1,700,1200);
 INSERT INTO SALGRADE VALUES (2,1201,1400);
 INSERT INTO SALGRADE VALUES (3,1401,2000);
